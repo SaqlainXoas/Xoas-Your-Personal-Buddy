@@ -1,5 +1,7 @@
 # XOAS: Your Personal Buddy 😊
 
+![XOAS Logo](logo.png)
+
 XOAS is a locally hosted chatbot designed to process domain-specific queries from PDF files and deliver precise, conversational responses. Built with privacy and efficiency in mind, it operates entirely on local infrastructure, ensuring robust data security and seamless operation.
 
 ---
@@ -16,40 +18,44 @@ XOAS is a locally hosted chatbot designed to process domain-specific queries fro
 
 ## 🔧 Technology Stack
 
-| Technology            | Logo                                                                 |
-|------------------------|----------------------------------------------------------------------|
-| **Vector Database**    | ![Qdrant](https://img.shields.io/badge/Qdrant-002438?logo=qdrant&logoColor=white) |
-| **Embedding Model**    | ![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD55F?logo=huggingface&logoColor=black) |
-| **Language Model**     | ![LLaMA](https://img.shields.io/badge/LLaMA-0033CC?logo=ai&logoColor=white)       |
-| **Frontend**           | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)   |
-| **Programming Language** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) |
-| **Containerization**   | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) |
+| Technology               | Logo |
+| ------------------------ | ---- |
+| **Vector Database**      | ![Qdrant Logo](https://upload.wikimedia.org/wikipedia/commons/5/56/Qdrant_Logo.svg) |
+| **Embedding Model**      | ![Hugging Face Logo](https://huggingface.co/front/assets/huggingface_logo-noborder.svg) |
+| **Language Model**       | ![LLaMA Logo](https://ollama.com/static/media/ollama-emoji.a1b0656b.svg) |
+| **Frontend**             | ![Streamlit Logo](https://streamlit.io/images/brand/streamlit-mark-color.svg) |
+| **Programming Language** | ![Python Logo](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg) |
+| **Containerization**     | ![Docker Logo](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png) |
 
 ### Combined Technology Stack
 
-![Technology Cluster](https://via.placeholder.com/800x400?text=Cluster+Image+of+Technology+Logos) *(Replace this placeholder with your custom cluster image.)*
+![Combined Technology Stack](https://via.placeholder.com/800x300.png?text=Technology+Cluster+Image)
 
 ---
 
 ## 🎥 Demo
 
-Watch a live demo of XOAS in action:  
-[![Watch the video](https://img.youtube.com/vi/5969e8c373e94f51985bfa4829f89186/maxresdefault.jpg)](https://www.loom.com/share/5969e8c373e94f51985bfa4829f89186)
+Watch a live demo of XOAS in action:
+
+[![Watch the Video](https://img.youtube.com/vi/5969e8c373e94f51985bfa4829f89186/0.jpg)](https://www.loom.com/share/5969e8c373e94f51985bfa4829f89186)
 
 ---
 
 ## 🌐 Application Workflow
 
 1. **PDF Embedding:**
+
    - Extracts and splits text from PDFs into manageable chunks.
    - Converts text into vector embeddings using Hugging Face BGE.
    - Stores embeddings in Qdrant with metadata for retrieval.
 
 2. **Chatbot Interaction:**
+
    - Routes domain-specific queries to Qdrant for embedding-based retrieval.
    - Handles general queries with LLaMA for conversational responses.
 
 3. **User-Friendly Interface:**
+
    - Upload PDFs and interact seamlessly via a Streamlit-based interface.
 
 ---
@@ -77,6 +83,7 @@ Ensure the following are installed on your system:
 ## 🔧 Setup Instructions
 
 ### 1. Install Ollama and Download LLaMA Model:
+
 ```bash
 # Install Ollama from https://ollama.com/
 ollama pull llama 3.2:3b
@@ -84,12 +91,14 @@ ollama run llama 3.2:3b
 ```
 
 ### 2. Set Up Qdrant with Docker:
+
 ```bash
 docker pull qdrant/qdrant
 docker run -p 6333:6333 -v .:/qdrant/storage qdrant/qdrant
 ```
 
 ### 3. Install Python Dependencies:
+
 ```bash
 python -m venv env
 source env/bin/activate  # For Windows: env\Scripts\activate
@@ -97,6 +106,7 @@ pip install -r requirements.txt
 ```
 
 ### 4. Run the Application:
+
 ```bash
 streamlit run app.py
 ```
