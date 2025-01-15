@@ -12,24 +12,21 @@ XOAS is a locally hosted chatbot designed to process domain-specific queries fro
 - **Q&A Retrieval:** Utilizes Qdrant for efficient retrieval of domain-specific data.
 - **Chatbot Responses:** Generates concise and professional replies using LLaMA 3.2.
 - **Interactive Interface:** Powered by Streamlit for a user-friendly experience.
-- **Localized Infrastructure:** Operates without reliance on external APIs, ensuring data privacy.
+- **Localized Docker Infrastructure:** Operates without reliance on external APIs, ensuring data privacy.
 
 ---
-
 ## 🔧 Technology Stack
 
-| Technology               | Logo |
-| ------------------------ | ---- |
-| **Vector Database**      | ![Qdrant Logo](https://upload.wikimedia.org/wikipedia/commons/5/56/Qdrant_Logo.svg) |
-| **Embedding Model**      | ![Hugging Face Logo](https://huggingface.co/front/assets/huggingface_logo-noborder.svg) |
-| **Language Model**       | ![LLaMA Logo](https://ollama.com/static/media/ollama-emoji.a1b0656b.svg) |
-| **Frontend**             | ![Streamlit Logo](https://streamlit.io/images/brand/streamlit-mark-color.svg) |
-| **Programming Language** | ![Python Logo](https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg) |
-| **Containerization**     | ![Docker Logo](https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png) |
+| Technology            | Logo                                                                 |
+|------------------------|----------------------------------------------------------------------|
+| **Vector Database**    | ![Qdrant](https://img.shields.io/badge/Qdrant-002438?logo=qdrant&logoColor=white) |
+| **Embedding Model**    | ![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD55F?logo=huggingface&logoColor=black) |
+| **Language Model**     | ![LLaMA](https://img.shields.io/badge/LLaMA-0033CC?logo=ai&logoColor=white)       |
+| **Frontend**           | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)   |
+| **Programming Language** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) |
+| **Containerization**   | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) |
 
-### Combined Technology Stack
 
-![Combined Technology Stack](stack_combined.png)
 
 ---
 
@@ -116,11 +113,7 @@ streamlit run app.py
 - **Hardware Limitations:** The system runs locally with 12GB of RAM and 256GB SSD storage without GPU support.
 - **Latent Response Times:** Resource constraints result in slightly longer response times.
 
----
 
-## 🔒 License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
