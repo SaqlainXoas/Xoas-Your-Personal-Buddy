@@ -2,6 +2,8 @@
 
 # XOAS: Your Personal Buddy 😊
 
+</div>
+
 <div align="center">
   <img src="logo.png" alt="XOAS Logo" width="200" />
 </div>
