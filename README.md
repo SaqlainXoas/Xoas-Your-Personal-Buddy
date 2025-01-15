@@ -1,6 +1,8 @@
 # XOAS: Your Personal Buddy 😊
 
-<img src="logo.png" alt="XOAS Logo" width="200" />
+<div align="center">
+  <img src="logo.png" alt="XOAS Logo" width="200" />
+</div>
 
 XOAS is a locally hosted chatbot designed to process domain-specific queries from PDF files and deliver precise, conversational responses. Built with privacy and efficiency in mind, it operates entirely on local infrastructure, ensuring robust data security and seamless operation.
 
