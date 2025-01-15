@@ -112,6 +112,8 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
+
+
 ---
 
 ## 🔎 Challenges Faced
@@ -120,6 +122,20 @@ streamlit run app.py
 - **Latent Response Times:** Resource constraints result in slightly longer response times.
 
 
+# Project Structure
+
+The XOAS project is organized as follows:
+
+```plaintext
+|-- vectors.py               # Handles vector embedding using Hugging Face's BGE model.
+|-- chatbot.py               # Core chatbot logic for query processing and response generation.
+|-- app.py                   # Streamlit application interface for user interaction.
+|-- processed_files.json     # Tracks embedded PDFs to avoid redundant processing.
+|-- animation.json           # Contains animation configurations for the chatbot UI.
+|-- data/                    # Folder to store PDF files for embedding.
+|   |-- example.pdf          # Sample PDF for testing (replace with your own files).
+|-- logo.png                 # Application logo used in the interface and documentation.
+|-- requirements.txt         # List of Python dependencies required to run the application.
 
 ---
 
