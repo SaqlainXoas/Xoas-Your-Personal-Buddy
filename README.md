@@ -38,7 +38,12 @@ XOAS is a locally hosted chatbot designed to process domain-specific queries fro
 
 ## 🎥 Demo
 
-![Demo Video](https://www.loom.com/embed/5969e8c373e94f51985bfa4829f89186)
+<div align="center">
+  <video src="demo.mp4" width="600" controls>
+    Your browser does not support the video tag.
+  </video>
+</div>
+
 
 ---
 
