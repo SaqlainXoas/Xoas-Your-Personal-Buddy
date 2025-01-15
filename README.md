@@ -96,6 +96,8 @@ ollama run llama 3.2:3b
 ```bash
 docker pull qdrant/qdrant
 docker run -p 6333:6333 -v .:/qdrant/storage qdrant/qdrant
+
+docker run-p 6333:6333 -v .:/qdrant/storage qdrant/qdrant 
 ```
 
 ### 3. Install Python Dependencies:
