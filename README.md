@@ -1,3 +1,5 @@
+<div align="center">
+
 # XOAS: Your Personal Buddy 😊
 
 <div align="center">
