@@ -29,15 +29,13 @@ XOAS is a locally hosted chatbot designed to process domain-specific queries fro
 
 ### Combined Technology Stack
 
-![Combined Technology Stack](https://via.placeholder.com/800x300.png?text=Technology+Cluster+Image)
+![Combined Technology Stack](stack_combined.png)
 
 ---
 
 ## 🎥 Demo
 
-Watch a live demo of XOAS in action:
-
-[![Watch the Video](https://img.youtube.com/vi/5969e8c373e94f51985bfa4829f89186/0.jpg)](https://www.loom.com/share/5969e8c373e94f51985bfa4829f89186)
+![Demo Video](https://www.loom.com/embed/5969e8c373e94f51985bfa4829f89186)
 
 ---
 
