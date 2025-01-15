@@ -1,106 +1,120 @@
 # XOAS: Your Personal Buddy 😊
 
-## Description
-XOAS is an AI-powered tool that facilitates quick target identification and drug discovery, powered by state-of-the-art models and efficient infrastructure. With embedded PDF processing, chatbot functionality, and scalable architecture, XOAS aims to streamline decision-making in drug discovery. The project integrates Qdrant for local data storage, BGE for embedding generation, and LLaMA 3.2 for conversational AI.
+XOAS is a locally hosted chatbot designed to process domain-specific queries from PDF files and deliver precise, conversational responses. Built with privacy and efficiency in mind, it operates entirely on local infrastructure, ensuring robust data security and seamless operation.
 
-## Technology Stack
+---
 
-Here’s the core stack that powers XOAS:
+## 🚀 Features
 
-- **Vector Database**: [Qdrant (local instance via Docker)](https://qdrant.tech)
-- **Embedding Model**: [BAAI BGE](https://huggingface.co/BAAI/BGE)
-- **Language Model**: [LLaMA 3.2 (3B model)](https://huggingface.co/MetaAI/LLaMA) - locally hosted via [Ollama](https://ollama.com)
-- **Frontend**: [Streamlit](https://streamlit.io) - for interactive user interfaces
-- **Programming Language**: Python 3.10+
+- **PDF Embedding:** Converts PDF files into vector embeddings using Hugging Face’s BGE model.
+- **Q&A Retrieval:** Utilizes Qdrant for efficient retrieval of domain-specific data.
+- **Chatbot Responses:** Generates concise and professional replies using LLaMA 3.2.
+- **Interactive Interface:** Powered by Streamlit for a user-friendly experience.
+- **Localized Infrastructure:** Operates without reliance on external APIs, ensuring data privacy.
 
-### Tech Stack Logos:
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%2B-blue" alt="Python" width="100" />
-  <img src="https://img.shields.io/badge/Streamlit-1.0%2B-blue" alt="Streamlit" width="100" />
-  <img src="https://img.shields.io/badge/Docker-20.10%2B-blue" alt="Docker" width="100" />
-  <img src="https://img.shields.io/badge/Qdrant-1.0.0-green" alt="Qdrant" width="100" />
-  <img src="https://img.shields.io/badge/HuggingFace-Transformers-yellow" alt="HuggingFace" width="100" />
-  <img src="https://img.shields.io/badge/Ollama-LLaMA-blue" alt="Ollama" width="100" />
-</p>
+---
 
-### Cluster of Logos (Portfolio)
-Below are some of the technologies I have worked with in various projects, displayed here as a visual portfolio:
+## 🔧 Technology Stack
 
-<p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/Python_logo_2020.svg" alt="Python" width="100" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/0/06/Docker_logo.png" alt="Docker" width="100" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Ollama_logo.svg" alt="Ollama" width="100" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Streamlit_logo.png" alt="Streamlit" width="100" />
-  <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Qdrant_logo.svg" alt="Qdrant" width="100" />
-</p>
+| Technology            | Logo                                                                 |
+|------------------------|----------------------------------------------------------------------|
+| **Vector Database**    | ![Qdrant](https://img.shields.io/badge/Qdrant-002438?logo=qdrant&logoColor=white) |
+| **Embedding Model**    | ![Hugging Face](https://img.shields.io/badge/HuggingFace-FFD55F?logo=huggingface&logoColor=black) |
+| **Language Model**     | ![LLaMA](https://img.shields.io/badge/LLaMA-0033CC?logo=ai&logoColor=white)       |
+| **Frontend**           | ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)   |
+| **Programming Language** | ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white) |
+| **Containerization**   | ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white) |
 
-## Features
+### Combined Technology Stack
 
-- **PDF Embedding**: Converts PDF files into vector embeddings using the Hugging Face BGE model.
-- **Q&A Retrieval**: Utilizes Qdrant to store and retrieve similar embeddings for domain-specific queries.
-- **Chatbot Responses**: LLaMA 3.2 generates conversational and professional responses.
+![Technology Cluster](https://via.placeholder.com/800x400?text=Cluster+Image+of+Technology+Logos) *(Replace this placeholder with your custom cluster image.)*
 
-## Components
+---
 
-### Embedding Management (vectors.py)
-- **Embedding Model**: BGE embedding model from Hugging Face ensures normalized and device-specific embeddings.
-- **Qdrant Vector Store**: Hosted locally via Docker (`http://localhost:6333`).
-  - Collections are created dynamically if not already present.
-- **PDF Processing**: Splits PDF text into manageable chunks using RecursiveCharacterTextSplitter and generates embeddings for storage in Qdrant.
-- **Tracking Processed PDFs**: Uses a JSON-based tracking system to avoid reprocessing files.
+## 🎥 Demo
 
-### Chatbot Management (chatbot.py)
-- **Model Configuration**: 
-  - Embedding model: BGE (small-en) from Hugging Face.
-  - Language model: Ollama-based LLaMA 3.2 (3B), configured with low-temperature settings for concise responses.
-- **Prompts**:
-  - Domain-specific Prompt: Context-driven, focused on personal PDF-based queries.
-  - General Prompt: Provides conversational and professional responses for non-domain-specific queries.
-- **Retrieval and Query Handling**: 
-  - Uses Qdrant as the retriever to find relevant embeddings for user queries.
-  - Implements a fallback mechanism for general queries using LLaMA.
+Watch a live demo of XOAS in action:  
+[![Watch the video](https://img.youtube.com/vi/5969e8c373e94f51985bfa4829f89186/maxresdefault.jpg)](https://www.loom.com/share/5969e8c373e94f51985bfa4829f89186)
 
-### Application Interface (app.py)
-- **File Upload**: Allows users to upload PDF documents in the “data folder” via Streamlit.
-- **Embedding Creation**: Automatically processes uploaded PDFs, generating embeddings if not already stored.
-- **Query Input**: Users can input questions into the chatbot interface, with the system routing queries based on whether they are domain-specific or general.
+---
 
-## Advantages of the Solution
+## 🌐 Application Workflow
 
-- **Localized Infrastructure**: 
-  - Eliminates reliance on external APIs like Pinecone, reducing operational costs.
-  - Enhances data security by keeping everything on the local network or within your own network.
-  
-- **Scalability**: 
-  - Modular design supports additional functionality, such as integrating new data sources or upgrading models.
-  
-- **Efficiency**:
-  - JSON-based file tracking avoids redundant embedding creation.
-  - Low-temperature LLaMA configuration ensures concise and accurate responses.
+1. **PDF Embedding:**
+   - Extracts and splits text from PDFs into manageable chunks.
+   - Converts text into vector embeddings using Hugging Face BGE.
+   - Stores embeddings in Qdrant with metadata for retrieval.
 
-- **Qdrant and Local Data Hosting**:
-  - Data is stored locally within the internal network, ensuring privacy and data security.
-  - The Docker-based Qdrant solution offers full control over the data.
+2. **Chatbot Interaction:**
+   - Routes domain-specific queries to Qdrant for embedding-based retrieval.
+   - Handles general queries with LLaMA for conversational responses.
 
-## Challenges Faced
+3. **User-Friendly Interface:**
+   - Upload PDFs and interact seamlessly via a Streamlit-based interface.
 
-- **Resource Constraints (CPU-based Only)**:
-  - Latent response times may occur due to hardware limitations (12GB RAM and 256GB SSD, without GPU).
+---
 
-## Prerequisites
+## 💡 Advantages
 
-Before starting, make sure you have the following installed:
+1. **Localized Infrastructure:** Operates without reliance on external APIs, reducing costs and enhancing privacy.
+2. **Data Security:** Ensures sensitive data remains within the local network.
+3. **Efficiency:** Avoids redundant embedding creation with JSON-based tracking and ensures concise responses with optimized LLaMA settings.
+4. **Scalability:** Modular design supports future feature integration and model upgrades.
 
-- **Python 3.10.9** (or a compatible version)
-- **Ollama** (for downloading and running the LLaMA model)
-- **Docker** (for setting up Qdrant)
-- **VS Code** (or your preferred IDE)
+---
 
-### Steps to Install and Set Up:
+## 🛠️ Prerequisites
 
-#### Download and Install Ollama:
-1. Visit [Ollama](https://ollama.com) and download the software.
-2. Open the Ollama Command Prompt and run:
-   ```bash
-   ollama pull llama 3.2:3b
-   ollama run llama 3.2:3b
+Ensure the following are installed on your system:
+
+- Python 3.10.9 or later
+- Docker
+- Ollama
+- IDE (e.g., VS Code)
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Install Ollama and Download LLaMA Model:
+```bash
+# Install Ollama from https://ollama.com/
+ollama pull llama 3.2:3b
+ollama run llama 3.2:3b
+```
+
+### 2. Set Up Qdrant with Docker:
+```bash
+docker pull qdrant/qdrant
+docker run -p 6333:6333 -v .:/qdrant/storage qdrant/qdrant
+```
+
+### 3. Install Python Dependencies:
+```bash
+python -m venv env
+source env/bin/activate  # For Windows: env\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 4. Run the Application:
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🔎 Challenges Faced
+
+- **Hardware Limitations:** The system runs locally with 12GB of RAM and 256GB SSD storage without GPU support.
+- **Latent Response Times:** Resource constraints result in slightly longer response times.
+
+---
+
+## 🔒 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+Feel free to fork, clone, and contribute to XOAS! Your feedback and enhancements are always welcome. 🌟
+
